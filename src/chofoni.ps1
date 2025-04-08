@@ -15,11 +15,11 @@ function chofoni {
         try {
             $routes = Invoke-RestMethod "$script:ApiBaseUrl/routes" -ErrorAction SilentlyContinue
             $script:DiscoveredEndpoints = $routes.endpoints | ForEach-Object { "$script:ApiBaseUrl$_" }
-            Write-Host "🔍 Discovered API endpoints:" -ForegroundColor Cyan
-            $script:DiscoveredEndpoints | ForEach-Object { Write-Host "  → $_" -ForegroundColor DarkCyan }
+            Write-Host "Discovered API endpoints:" -ForegroundColor Cyan
+            $script:DiscoveredEndpoints | ForEach-Object { Write-Host "  -> $_" -ForegroundColor DarkCyan }
         }
         catch {
-            Write-Warning "⚠️  No /routes endpoint found. Falling back to defaults."
+            Write-Warning "WARNING: No /routes endpoint found. Falling back to defaults."
             $script:DiscoveredEndpoints = @(
                 "$script:ApiBaseUrl/api/profile",
                 "$script:ApiBaseUrl/api/projects",
@@ -43,9 +43,9 @@ function chofoni {
         $response | ConvertTo-Json -Depth 10
     }
     catch {
-        Write-Error "💥 FAILED to fetch $url. Is your API running? Full error: $_"
+        Write-Error "!! FAILED to fetch $url. Is your API running? Full error: $_"
     }
 }
 
-# Shortcut alias (because typing 'chofoni' is for peasants)
+# Shortcut alias
 function cfn { chofoni @args }

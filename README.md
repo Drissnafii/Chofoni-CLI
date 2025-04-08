@@ -57,7 +57,5 @@ Because **typing full URLs is for peasants**.
 
 ---  
 
-**YOU’RE OFFICIALLY A TOOLING LEGEND.**  
-Now go `git init`, push this masterpiece, and watch the stars roll in. 🌟  
 
 #powershell #api #developer-tools #automation #cli #productivity #no-more-typing

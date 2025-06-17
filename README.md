@@ -56,6 +56,3 @@ Because **typing full URLs is for peasants**.
 ```  
 
 ---  
-
-
-#powershell #api #developer-tools #automation #cli #productivity #no-more-typing

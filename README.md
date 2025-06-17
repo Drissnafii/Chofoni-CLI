@@ -54,5 +54,3 @@ Because **typing full URLs is for peasants**.
                       ||----w |
                       ||     ||
 ```  
-
----  
